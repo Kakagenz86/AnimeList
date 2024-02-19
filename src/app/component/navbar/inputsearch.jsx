@@ -10,11 +10,13 @@ const InputSearch = () => {
 
     const handleSearch = (e) => {
         const id = inputRef.current.value
-        if (!id) return
+        
+        if (!id || id.trim() == '') return
 
         if (e.key === 'Enter' || e.type === 'click') {
             e.preventDefault();
             router.push(`/search/${id}`)
+            inputRef.current.value = ''
         }
     }
 
