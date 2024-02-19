@@ -1,7 +1,7 @@
 'use client'
 
 import AnimeTop from "../component/AnimeTop"
-import HeaderMenu from "../component/Utilities/Headermenu";;
+import HeaderMenu from "../component/Utilities/HeaderMenu";;
 import Pagination from "../component/Utilities/Pagination";
 import { useEffect, useState } from "react";
 import { getAnime } from "../../lib/api-lib";
