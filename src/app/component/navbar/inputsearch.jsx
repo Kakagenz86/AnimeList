@@ -16,7 +16,6 @@ const InputSearch = () => {
         if (e.key === 'Enter' || e.type === 'click') {
             e.preventDefault();
             router.push(`/search/${id}`)
-            inputRef.current.value = ''
         }
     }
 

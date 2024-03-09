@@ -6,10 +6,13 @@ const AnimeTop = ({api}) => {
         <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 px-4">
             {api.data?.map((anime) => {
                 return (
-                    <Link className="cursor-pointer text-white hover:text-color-accent transition-all" key={anime.mal_id} href={`/detail/${anime.mal_id}`}>
-                        <Image src={anime.images.webp.image_url} alt="..." width={350} height={350} className="w-full max-h-72 object-cover"/>
-                        <h3 className="font-bold md:text-xl text-sm p-3">{anime.title}</h3>
-                    </Link>
+                    <div key={anime.mal_id}>
+                        <div className=" text-white transition-all">
+                            <Image src={anime.images.webp.image_url} alt="..." width={350} height={350} className="w-full max-h-72 object-cover"/>
+                            <h3 className="font-bold md:text-xl text-sm p-3">{anime.title}</h3>
+                        </div>
+                            <Link className="transition-all font-bold md:text-xl text-sm p-3 text-color-accent hover:text-white" href={`/detail/${anime.mal_id}`} >Lihat Anime</Link>
+                    </div>
                 )
                 })}
         </div>
